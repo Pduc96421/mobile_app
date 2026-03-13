@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mini_project.model.Room;
+import com.example.mini_project.repository.RoomRepository;
 
 public class AddRoomActivity extends AppCompatActivity {
 
