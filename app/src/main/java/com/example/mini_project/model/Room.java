@@ -38,4 +38,3 @@ public class Room implements Serializable {
     public String getTenantPhone() { return tenantPhone; }
     public void setTenantPhone(String tenantPhone) { this.tenantPhone = tenantPhone; }
 }
-
