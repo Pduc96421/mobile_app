@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quản lý phòng trọ"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="12dp">
+        
+        <TextView
+            android:id="@+id/tvTotalRooms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tổng: 0"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:gravity="center"/>
+            
+        <TextView
+            android:id="@+id/tvRentedRooms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Đã thuê: 0"
+            android:textStyle="bold"
+            android:textColor="#CC0000"
+            android:gravity="center"/>
+            
+        <TextView
+            android:id="@+id/tvEmptyRooms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Trống: 0"
+            android:textStyle="bold"
+            android:textColor="#008800"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etSearchBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutDashboard"
+        android:hint="Tìm theo tên phòng hoặc SĐT..."
+        android:inputType="text"
+        android:drawablePadding="8dp"
+        android:padding="12dp"
+        android:background="#E0E0E0"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnAddRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm phòng mới"
+        android:layout_below="@id/etSearchBox"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRooms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnAddRoom"/>
+
+</RelativeLayout>
