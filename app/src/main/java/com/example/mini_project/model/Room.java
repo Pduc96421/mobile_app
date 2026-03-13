@@ -1,70 +1,40 @@
 package com.example.mini_project.model;
 
-public class Room {
-    String maPhong;
-    String tenPhong;
-    double giaThue;
-    String tinhTrang;
-    String tenNguoiThue;
-    String soDienThoai;
+import java.io.Serializable;
 
-    public Room() {
+public class Room implements Serializable {
+    private String id;
+    private String name;
+    private double price;
+    private boolean isRented; // true = Đã thuê, false = Còn trống
+    private String tenantName;
+    private String tenantPhone;
+
+    public Room(String id, String name, double price, boolean isRented, String tenantName, String tenantPhone) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.isRented = isRented;
+        this.tenantName = tenantName;
+        this.tenantPhone = tenantPhone;
     }
 
-    public Room(String maPhong, String tenPhong, double giaThue, String tinhTrang, String tenNguoiThue, String soDienThoai) {
-        this.maPhong = maPhong;
-        this.tenPhong = tenPhong;
-        this.giaThue = giaThue;
-        this.tinhTrang = tinhTrang;
-        this.tenNguoiThue = tenNguoiThue;
-        this.soDienThoai = soDienThoai;
-    }
+    // Getters and Setters
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
-    public String getMaPhong() {
-        return maPhong;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public void setMaPhong(String maPhong) {
-        this.maPhong = maPhong;
-    }
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
 
-    public String getTenPhong() {
-        return tenPhong;
-    }
+    public boolean isRented() { return isRented; }
+    public void setRented(boolean rented) { isRented = rented; }
 
-    public void setTenPhong(String tenPhong) {
-        this.tenPhong = tenPhong;
-    }
+    public String getTenantName() { return tenantName; }
+    public void setTenantName(String tenantName) { this.tenantName = tenantName; }
 
-    public double getGiaThue() {
-        return giaThue;
-    }
-
-    public void setGiaThue(double giaThue) {
-        this.giaThue = giaThue;
-    }
-
-    public String getTinhTrang() {
-        return tinhTrang;
-    }
-
-    public void setTinhTrang(String tinhTrang) {
-        this.tinhTrang = tinhTrang;
-    }
-
-    public String getTenNguoiThue() {
-        return tenNguoiThue;
-    }
-
-    public void setTenNguoiThue(String tenNguoiThue) {
-        this.tenNguoiThue = tenNguoiThue;
-    }
-
-    public String getSoDienThoai() {
-        return soDienThoai;
-    }
-
-    public void setSoDienThoai(String soDienThoai) {
-        this.soDienThoai = soDienThoai;
-    }
+    public String getTenantPhone() { return tenantPhone; }
+    public void setTenantPhone(String tenantPhone) { this.tenantPhone = tenantPhone; }
 }
